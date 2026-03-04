@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+
 """
 📈 주식 시황 브리핑 자동 생성기 (텔레그램 버전)
 - 미국/국내 주식 뉴스 큐레이션
@@ -363,7 +365,7 @@ def generate_ny_detail(news: dict, market_data: dict) -> dict:
 섹터는 뉴스에서 실제 언급된 것 위주로 3~5개 작성하세요."""
 
     message = client.messages.create(
-        model="claude-opus-4-5-20251101",
+        model="claude-haiku-4-5-20251001",
         max_tokens=4096,
         messages=[{"role": "user", "content": prompt}]
     )
@@ -446,7 +448,7 @@ def generate_market_brief(news: dict) -> dict:
 뉴스 큐레이션: 미국 2개, 국내 3개 (총 5개). 모든 내용 한국어 작성."""
 
     message = client.messages.create(
-        model="claude-opus-4-5-20251101",
+        model="claude-haiku-4-5-20251001",
         max_tokens=4096,
         messages=[{"role": "user", "content": prompt}]
     )
