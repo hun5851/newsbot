@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>MARKET INTELLIGENCE · SYSTEM INITIALIZING</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #000;
+      color: #E0E0E0;
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FF6600;
+      letter-spacing: 4px;
+      margin-bottom: 6px;
+    }
+    .sub {
+      font-size: 10px;
+      color: #555;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+    }
+    .box {
+      border: 1px solid #1e1e1e;
+      border-top: 2px solid #FF6600;
+      background: #080808;
+      padding: 24px 28px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+    .status {
+      font-size: 11px;
+      color: #FFB800;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .msg {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.8;
+    }
+    .time {
+      margin-top: 20px;
+      font-size: 10px;
+      color: #333;
+    }
+    .bar {
+      width: 100%;
+      height: 2px;
+      background: #111;
+      margin: 20px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .bar::after {
+      content: '';
+      position: absolute;
+      left: -40%;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, #FF6600, transparent);
+      animation: scan 2s linear infinite;
+    }
+    @keyframes scan { to { left: 100%; } }
+    .footer {
+      margin-top: 40px;
+      font-size: 9px;
+      color: #333;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">▶ MARKET INTELLIGENCE</div>
+  <div class="sub">AUTOMATED BRIEFING SYSTEM</div>
+  <div class="box">
+    <div class="status">⬤ SYSTEM INITIALIZING</div>
+    <div class="bar"></div>
+    <div class="msg">
+      첫 번째 자동 브리핑이 준비 중입니다.<br>
+      매일 <strong style="color:#FF6600">오전 7:00 KST</strong>에 자동 업데이트됩니다.<br><br>
+      GitHub Actions에서 수동으로<br>
+      "Run workflow"를 실행하면<br>
+      즉시 브리핑을 생성할 수 있습니다.
+    </div>
+    <div class="time">NEXT UPDATE: 07:00 KST DAILY</div>
+  </div>
+  <div class="footer">
+    POWERED BY CLAUDE AI · FOR REFERENCE ONLY<br>
+    INVESTMENT DECISIONS ARE SOLELY THE RESPONSIBILITY OF THE INVESTOR
+  </div>
+</body>
+</html>
