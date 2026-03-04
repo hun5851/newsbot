@@ -25,15 +25,17 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Generate market brief
+      - name: Generate and send market brief
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python generate_content.py
 
-      - name: Commit and push
+      - name: Save JSON backup
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html latest_brief.json
-          git diff --staged --quiet || git commit -m "시황 브리핑 업데이트"
+          git add latest_brief.json
+          git diff --staged --quiet || git commit -m "브리핑 백업"
           git push
