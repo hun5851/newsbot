@@ -64,14 +64,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-```
-
----
-
-## 📄 파일 2: `requirements.txt`
-
-GitHub → `requirements.txt` → ✏️ 편집 → 전체 삭제 → 아래 내용 붙여넣기:
-```
-anthropic>=0.40.0
-feedparser>=6.0.11
-yfinance>=0.2.50
